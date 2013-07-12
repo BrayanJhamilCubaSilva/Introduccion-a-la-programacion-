@@ -1,0 +1,30 @@
+/******************************************************************************************/
+/*Programa : Introducción a la programación*/
+/*Nombre : Brayan Jhamil Cuba Silva */
+/*Fecha : 12 de julio de 2013 */
+/*Descripción: Calcular el área de cualquier cuadrado usando la fórmula L^2*/
+/*Entrada : Lado*/
+/*Salida : Área */
+/******************************************************************************************/
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+void main()
+{float lado, area;
+ printf("\n\nCalcular el area de un cuadrado\n\n");
+ printf("\n\n=================================\n\n");
+ printf("\n\nIngrese lado de un cuadrado:");
+ scanf_s("%f", & lado);
+ //Calculos de area de un cuadrado
+ if(lado > 0)
+ {
+   area = pow(lado,2);
+	 printf("El area es:%f ",area);
+ }
+ else
+ {
+	 printf("Datos invalidos");
+ }
+ getch();
+}
