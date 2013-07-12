@@ -1,0 +1,34 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 12 de julio de 2013 */
+/*Descripción: Calcular el área de cualquier triángulo usando la fórmula (base * altura)/2*/
+/*Entrada    : Base y altura*/
+/*Salida     : Área */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "stdlib.h"
+#include "conio.h"
+#include "stdio.h"
+
+void main()
+{float base, altura, area;
+ printf("\t Calculo del area de un triangulo\n");
+ printf("\t =================================\n");
+ printf("Ingrese la base:");
+ scanf_s("%f",&base );
+ printf("Ingrese la altura:");
+ scanf_s("%f",&altura);
+ if (base > 0 && altura > 0)
+ {    //Calculo de area
+     area = (base * altura)/2;
+ 
+    printf("\n\n El area es %f",area);
+ }
+ else
+ {
+   printf("\n\n DATOS NO VALIDOS");
+ }
+ getch();
+}
