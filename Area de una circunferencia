@@ -1,0 +1,35 @@
+/******************************************************************************************/
+/*Programa : Introducción a la programación*/
+/*Nombre : Brayan Jhamil Cuba Silva */
+/*Fecha : 12 de julio de 2013 */
+/*Descripción: Calcular el área de cualquier circunferencia usando la fórmula L^2*/
+/*Entrada : La constante Pi y el radio*/
+/*Salida : Área */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+void main()
+{float radio, area;
+ printf("\t Calcular el area de una circunferencia\n");
+ printf("\t========================================\n");
+ printf("\nIngrese radio:");
+ scanf_s("%f", & radio);
+ if (radio > 0)
+ {
+   area = 3.1416 * pow (radio,2);
+	 printf("\nEl area de la circunferencia es: %f",area); 
+ }
+ else
+ {
+	 printf("\nERROR: RADIO INVALIDO");
+
+ }
+ getch();
+
+
+    
+}
