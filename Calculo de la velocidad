@@ -1,0 +1,33 @@
+/******************************************************************************************/
+/*Programa : Introducción a la programación*/
+/*Nombre : Brayan Jhamil Cuba Silva */
+/*Fecha : 15 de julio de 2013 */
+/*Descripción: Calcular la velocidad tomando en cuenta la distancia y el tiempo*/
+/*Entrada : Distancia y tiempo*/
+/*Salida : Velocidad */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+void main()
+{float distancia, tiempo;
+ printf("\t Calculo de velocidad y tiempo\n");
+ printf("\t===============================\n");
+ printf("Ingrese distancia:");
+ scanf_s("%f",& distancia);
+ printf("Ingrese tiempo:");
+ scanf_s("%f",& tiempo);
+ //Calculo de la velocidad
+ if( distancia>0 && tiempo > 0)
+ {
+   velocidad = distancia/tiempo;
+	 printf("La velocidad es :%f",velocidad);
+ }
+ else
+ {
+	 printf("ERROR DATOS INVALIDOS");
+ }
+ getch();
+}
