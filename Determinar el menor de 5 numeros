@@ -1,0 +1,55 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 15 de julio de 2013 */
+/*Descripción: Determinar el menor de cinco numeros */
+/*Entrada    : Ingresar cinco numeros y comparar cada uno para ver cual es el menor */
+/*Salida     : El numero menor */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+void main()
+{float n1, n2, n3, n4, n5;
+ printf("\tDeterminar el menor 5 numeros:\n");
+ printf("\t==============================\n");
+ printf("Ingrese el primer numero:");
+ scanf_s("%f", & n1);
+ printf("Ingrese el segundo numero:");
+ scanf_s("%f", & n2);
+ printf("Ingrese el tercer numero:");
+ scanf_s("%f", & n3);
+ printf("Ingrese el cuarto numero:");
+ scanf_s("%f", & n4);
+ printf("Ingrese el quinto numero:");
+ scanf_s("%f", & n5);
+ //Comparacion del primer numero con los cuatro numeros restantes//
+ if ( n1 < n2 && n1 < n3 && n1 < n4 && n1 < n5)
+ {
+   printf("El numero menor es: %f",n1);
+ }
+ //Comparacion del segundo numero con los cuatro numeros restantes//
+ if ( n2 < n1 && n2 < n3 && n2 < n4 && n2 < n5)
+ {
+	 printf("El numero menor es: %f",n2);
+ }
+ //Comparacion del tercer numero con los cuatro numeros restantes//
+ if ( n3 < n1 && n3 < n2 && n3 < n4 && n3 < n5)
+ {
+	 printf("El numero menor es: %f",n3);
+ }
+ //Comparacion del cuarto numero con los cuatro numeros restantes//
+ if ( n4 < n1 && n4 < n2 && n4 < n3 && n4 < n5)
+ {
+	 printf("El numero menor es: %f",n4);
+ }
+ //Comparacion del quinto numero con los cuatro numeros restantes//
+ if ( n5 < n1 && n5 < n2 && n5 < n3 && n5 < n4)
+ {
+	 printf("El numero menor es: %f",n5);
+ }
+ _getch();
+}
