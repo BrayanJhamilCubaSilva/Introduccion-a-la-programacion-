@@ -1,0 +1,50 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 15 de julio de 2013 */
+/*Descripción: Determinar el mayor de tres numeros */
+/*Entrada    : Ingresar tres numeros y comparar cada uno */
+/*Salida     : El numero mayor */
+/******************************************************************************************/
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{float a, b, c;
+ printf("\tDeterminar el mayor de tres numeros\n");
+ printf("\t====================================\n");
+ printf("Ingrese el primer numero:");
+ scanf_s("%f", & a);
+ printf("Ingrese el segundo numero:");
+ scanf_s("%f", & b);
+ printf("Ingrese el tercer numero:");
+ scanf_s("%f", & c);
+ //Calculo de comparcion entre numeros//
+ //Comparacion entre el primer y el segundo numero//
+ if( a > b)
+ {
+   //Comparcion entre el primer y el tercer numero//
+	 if ( a > c )
+	 {
+		 printf("El numero mayor es: %f", a);
+	 }
+	 else
+	 {
+		 printf("El numero mayor es: %f", c);
+	 }
+ }
+ else
+ {
+	 //Comparacion entre el segundo y el tercer numero//
+	 if( b > c)
+	 {
+		 printf("El numero mayor es: %f",b);
+	 }
+	 else
+	 {
+		 printf("El numero mayor es: %f",c);
+	 }
+ }
+ _getch();
+}
