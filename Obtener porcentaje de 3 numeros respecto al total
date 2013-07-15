@@ -1,10 +1,10 @@
 /******************************************************************************************/
-/*Programa : Introducción a la programación*/
-/*Nombre : Brayan Jhamil Cuba Silva */
-/*Fecha : 15 de julio de 2013 */
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 15 de julio de 2013 */
 /*Descripción: Calculo para obtener porcentaje */
-/*Entrada : Tres numeros y formula del porcentaje*/
-/*Salida : Porcentaje obtenido de cada numero */
+/*Entrada    : Tres numeros y formula del porcentaje*/
+/*Salida     : Porcentaje obtenido de cada numero */
 /******************************************************************************************/
 #include "stdafx.h"
 #include "stdio.h"
