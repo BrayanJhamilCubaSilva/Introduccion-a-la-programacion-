@@ -1,0 +1,33 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 15 de julio de 2013 */
+/*Descripción: Cálculo del promedio de 5 números */
+/*Entrada    : Ingresar cinco números*/
+/*Salida     : El promedio de los cinco números ingresados  */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{float n1, n2, n3, n4, n5,promedio;
+ printf("\tCalculo del promedio de 5 numeros\n");
+ printf("\t==================================\n");
+ printf("Ingrese primer numero:");
+ scanf_s("%f", & n1);
+ printf("Ingrese segundo numero:");
+ scanf_s("%f", & n2);
+ printf("Ingrese tercer numero:");
+ scanf_s("%f", & n3);
+ printf("Ingrese cuarto numero:");
+ scanf_s("%f", & n4);
+ printf("Ingrese quinto numero:");
+ scanf_s("%f", & n5);
+ //Calculo del promedio//
+ promedio = (n1 + n2 + n3 + n4 + n5)/5;
+ printf("El promedio es : %f", promedio);
+ _getch();
+   
+}
