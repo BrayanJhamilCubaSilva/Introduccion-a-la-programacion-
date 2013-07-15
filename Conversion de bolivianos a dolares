@@ -1,0 +1,31 @@
+/******************************************************************************************/
+/*Programa : Introducción a la programación*/
+/*Nombre : Brayan Jhamil Cuba Silva */
+/*Fecha : 15 de julio de 2013 */
+/*Descripción: Conversion de bolivianos a dolares */
+/*Entrada : El monto a convertir en bolivianos y el tipo de cambio a dolares*/
+/*Salida : El monto de dinero en dolares */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+
+void main(void)
+{float Bolivianos, tipo_de_cambio;
+ printf("\tConversion de Bolivianos a Dolares:\n");
+ printf("\t=================================\n");
+ printf("Ingrese un valor en Bolivianos: ");
+ scanf_s("%f",& Bolivianos);
+ printf("Ingrese el tipo de cambio:");
+ scanf_s("%f", & tipo_de_cambio);
+ if(Bolivianos > 0 && tipo de cambio > 0)
+ {
+   //Calculo de la conversion de bolivianos a dolares
+	 Dolares =  Bolivianos/tipo_de_cambio;
+	 printf ("La conversion de bolivianos a dolares es : %f",Dolares  );
+ }
+ _getch();
+}
