@@ -1,0 +1,34 @@
+/******************************************************************************************/
+/*Programa : Introducción a la programación*/
+/*Nombre : Brayan Jhamil Cuba Silva */
+/*Fecha : 15 de julio de 2013 */
+/*Descripción: Calculo para obtener porcentaje */
+/*Entrada : Tres numeros y formula del porcentaje*/
+/*Salida : Porcentaje obtenido de cada numero */
+/******************************************************************************************/
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main(void)
+{float n1, n2, n3,;
+ printf("\t Obtener porcentaje \n");
+ printf("\t=====================\n");
+ printf("Ingrese primer numero:");
+ scanf_s("%f",& n1);
+ printf("Ingrese segundo numero:");
+ scanf_s("%f",& n2);
+ printf("Ingrese tercer numero:");
+ scanf_s("%f",& n3);
+ if(n1 > 0 && n2 > 0 && n3 > 0)
+ {
+  suma = n1 + n2 + n3;
+	p1 = (n1/suma) * 100 ;
+	printf("\nEl porcentaje del primer numero es : %f",p1);
+	p2 = (n2/suma) * 100;
+	printf("\nEl porcentaje del segundo numero es : %f",p2);
+	p3 = (n3/100) * 100;
+	printf("\nEl porcentaje del tercer numero es : %f",p3);
+ }
+ _getch();
+}
