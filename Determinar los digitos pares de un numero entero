@@ -1,0 +1,38 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 18 de julio de 2013 */
+/*Descripción: Descomponer un numero y determinar si los digitos son pares */
+/*Entrada    : El numero entero, divisiones*/
+/*Salida     : La cantidad de  digitos pares */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+void main(void)
+{int numero, res, par, i;
+ int cp;
+ printf("\tPrograma que determina los digitos pares\n");
+ printf("\t=========================================\n");
+ printf("Introduzca un numero entero positivo");
+ scanf_s("%d", & numero);
+ cp = 0;//Contador de pares//
+ i = 0; // Acumulador//
+ while(numero>0)
+ {res = (numero%10);//Residuo//
+  par = (res%2);//Residuo par//
+  if(par==0)
+  {printf("%d\n",res);
+   cp = cp + 1;
+  }
+  numero = numero/10;
+  i++;
+
+ }
+ printf("Numero de digitos introducidos:%d\n",i);
+ printf("El numero de digitos pares son %d\n",cp);
+ _getch();
+    
+}
