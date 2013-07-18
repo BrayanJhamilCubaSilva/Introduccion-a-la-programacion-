@@ -1,0 +1,26 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 18 de julio de 2013 */
+/*Descripción: Calcular el factorial de un numero*/
+/*Entrada    : Numaro entero,formula del factorial*/
+/*Salida     : El factorial de un numero */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+void main(void)
+{int fac, a;
+ printf("\tPrograma que sirve para calcular el factorial\n");
+ printf("\t=============================================\n");
+ printf("Ingrese un numero entero");
+ scanf_s("%d", & a);
+ int s = 1;
+  for (int i=1;i<=a;i++)//Calculo del factorial//
+  {s =s * i;
+  }
+  printf("El facorial de %d es:%d",a,s );
+ _getch();
+}
