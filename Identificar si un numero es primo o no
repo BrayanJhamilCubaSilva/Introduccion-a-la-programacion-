@@ -1,0 +1,35 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 18 de julio de 2013 */
+/*Descripción: Determinar si un numero entero ingresado es un numero primo */
+/*Entrada    : Numero entero*/
+/*Salida     : Si dicho numero es primo */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+
+void main(void)
+{int numero,primo;
+ printf("\tPrograma que calcule si un numero es primo o no\n");
+ printf("\t================================================\n");
+ printf("Introducir un numero entero");
+ scanf_s("%d", & numero);
+ primo = 1;//Bandera de control//
+ for (int i = 0; i<numero; i++)//No inclute al 1 ni al mismo numero//
+ {
+   if((numero%1)==0)
+	 {primo = 0;//Dado que es divisible no es primo//
+     }
+ }
+ if (primo==1)
+ {printf("El numero es primo",numero);
+ }
+ else
+ {printf("El numero no es primo",numero);
+ }
+ _getch();
+
+}
