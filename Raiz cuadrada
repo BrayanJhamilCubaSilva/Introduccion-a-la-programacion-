@@ -1,0 +1,50 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 15 de julio de 2013 */
+/*Descripción: Calcular las raices de una ecuacion cuadratica/
+/*Entrada    : Ecuacion cuadratica y las variables a, b, c*/
+/*Salida     : Raices x1 y x2 */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "math.h"
+void main()
+{
+ float a, b, c, raiz, x, x1, x2;
+ printf("\tRaiz cuadratica\n");
+ printf("\t===============\n");
+ printf("\nDada la ecuacion ax ^ 2 + bx + c\n");
+ printf("\nObtener las tres incognitas\n");
+ scanf_s("%f", &a);
+ scanf_s("%f", &b);
+ scanf_s("%f", &c);
+ if (a == 0)
+ {
+   x = (c * -1)/b;
+     printf("x es : %f",x);
+ }
+ else
+ {
+   raiz = (pow(b,2)) - (4*a*c);
+	 if(raiz >= 0)
+   {
+
+	 x1 = ((b*-1) + sqrt(raiz))/2*a;
+
+	 x2 = ((b*-1) - sqrt(raiz))/2*a;
+
+	 printf("\nx1 = %f",x1);
+
+	 printf("\nx2 = %f",x2);
+
+   }
+     else
+   {
+	  printf("Las raices son imaginarias");
+   }
+ }
+ getch();
+}
