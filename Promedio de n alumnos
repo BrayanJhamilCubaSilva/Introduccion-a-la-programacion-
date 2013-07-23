@@ -1,0 +1,33 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 22 de julio de 2013 */
+/*Descripción: Promedio de un determinado numero de alumnos*/
+/*Entrada    : Las notas de los alumnos y la cantidad de alumnos*/
+/*Salida     : El promedio de los alumnos */
+/******************************************************************************************/
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{int alumnos, i;
+ float promedio,suma,notas;
+ printf("\tCalculo del promedio de alumnos\n");
+ printf("\t================================\n");
+ printf("Ingrese cantidad de alumnos:");
+ scanf_s("%d", & alumnos);
+ i = 0;    //Contador de alumnos//
+ suma = 0; //Acumulador de notas//
+ while(i < alumnos)
+ {printf("Ingrese las notas:");
+  scanf_s("%f", & notas);
+  suma = suma + notas;
+  i = i + 1;
+ }
+ promedio = suma/alumnos;
+ printf("El promedio de las notas es: %f",promedio);
+ getch();
+}
