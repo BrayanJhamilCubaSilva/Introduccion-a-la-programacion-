@@ -1,0 +1,34 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 12 de julio de 2013 */
+/*Descripción: Ingresar la clave de un software*/
+/*Entrada    : La opcion de la clave del software*/
+/*Salida     : La contrasena */
+/******************************************************************************************/
+
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{int clave, cont,contrasena;
+ printf("\tIntroducir la clave secreta del software:\n");
+ printf("Nota: Solo puede intentar tres veces:\n");
+  contrasena = 3250;
+ for(cont=0; cont<3;cont++)
+ {
+   scanf_s("%d", &clave);
+	 if(clave!=contrasena)
+	 {printf("\nClave incorrecta");
+	  4printf("\nIntentelo de nuevo:");
+	 }	
+	 else
+     { printf("Clave correcta");
+	   break;
+     }
+ }
+ _getch();
+}
