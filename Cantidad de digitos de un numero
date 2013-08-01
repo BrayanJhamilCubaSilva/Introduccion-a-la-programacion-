@@ -1,0 +1,28 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de julio de 2013 */
+/*Descripción: Ingresar un numero entero y averiguar cuantos digitos tiene*/
+/*Entrada    : Ingresar un numero entero*/
+/*Salida     : La cantidad de digitos de dicho numero */
+/******************************************************************************************/
+
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+void main()
+{int numero, cdig, num2;
+ cdig = 0;//Contador de digitos//
+ printf("Ingrese un numero entero:");
+ scanf_s("%d", & numero);
+ num2 = numero;//Auxiliar para imprimir el numero y su cantidad de digitos//
+ while(numero!=0)
+ {numero = numero / 10;
+  cdig ++;
+ }
+ printf("el numero entero %d tiene %d digitos",num2,cdig);
+ getch();
+}
