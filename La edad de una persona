@@ -1,0 +1,31 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de agosto de 2013 */
+/*Descripción: Calcular la edad de una persona*/
+/*Entrada    : El nombre y el anho de nacimiento de la persona*/
+/*Salida     : La edad de la persona */
+/******************************************************************************************/
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#define nombre 20
+
+void main()
+{char n[nombre];
+ int edad, anho_actual;
+ int anho;
+ printf("Ingrese el nombre de la persona:");
+ scanf_s("%s", &n);
+ printf("Ingrese el anho de nacimiento de %s",nombre);
+ scanf_s("%d", &anho);
+ anho_actual = 2013;
+ if(anho>0 && anho<=anho_actual)
+ { edad = anho_actual - anho;
+ }
+ printf("La edad de %s es %d",nombre,edad);
+ _getch();
+
+}
