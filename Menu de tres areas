@@ -1,0 +1,85 @@
+//Nombre: Brayan Jhamil Cuba Silva//
+//Programa:Menu funciones 3 areas//
+//Fecha:26/07/2013//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include <iostream>
+using namespace std;
+
+//Prototipo de funciones//
+float areatriangulo(float base, float altura);
+float areacuadrado(float lado);
+float areacirculo(float radio);
+
+int main()
+{int flag=1;
+ char opcion;
+ float a,b,r,area;//Para los lados de las figuras geometricas//
+ do
+ {system("cls");
+  printf("\t       Menu\n");
+  printf("\t================\n");
+  printf("\n1.Area del Triangulo"); 
+  printf("\n2.Area del Cuadrado");
+  printf("\n3.Area del Circulo");
+  printf("\n0.Salir\n\n");
+  printf("\nIngrese opcion:");
+  scanf_s("%d", &opcion);
+  switch(opcion)
+   {
+      case 1:
+  	  printf("\nIngrese la base:");
+		  scanf_s("%f", &b);
+		  printf("\nIngrese la altura:");
+		  scanf_s("%f", & a);
+		  area=areatriangulo(b,a);
+		  printf("\nArea es %f",area);
+		  _getch();
+		  break;
+      case 2:
+		  printf("\nIngrese el lado:");
+		  scanf_s("%f", &a);
+		  area=areacuadrado(a);
+		  printf("\nArea es %f",area);
+		  _getch();
+		  break;
+     case  3:
+		  printf("\nIngrese el radio:");
+		  scanf_s("%f", &r);
+		  area = areacirculo(r);
+		  printf("\nArea es %f",area);
+		  _getch();
+		  break;
+	 case  0:
+		 flag = 1;
+		 _getch();
+		 break;
+	 default:
+		 	 printf("\nOpcion no valida");
+			 _getch();
+   }
+        
+  }while(opcion!=0);
+     return 0;
+ 
+}
+
+//Declaracion de funciones//
+float areatriangulo(float base, float altura)
+{
+	float area = (base*altura)/2;
+	return (area);
+}
+float areacuadrado(float lado)
+{
+	float area = lado*lado;
+	return (area);
+}
+float areacirculo(float radio)
+{float pi=3.1416;
+	float area = pi*radio;
+	return (area);
+}
