@@ -1,0 +1,54 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 12 de julio de 2013 */
+/*Descripción: Encontrar una determinada posicion de un elemento en un vector*/
+/*Entrada    : El vector cargado*/
+/*Salida     : La posicion */
+/******************************************************************************************/
+
+
+#include "stdafx.h"
+#include <conio.h>
+#include <stdio.h>
+#define N 5
+
+void main()
+{int Vec[N], Pos[N], Res[N], i, j;
+ printf("Ingrese %d valores", N);
+ for(i=0;i<N;i++)
+   {do
+     {printf("\n Ingrese Vec[%d]= ", i);
+    scanf("%d", &Vec[i]);
+	  if(Vec[i]<1 || Vec[i] > N)
+	   {printf("\n\t\t Ha ingresado valor fuera de rango");
+	   }
+     }while(Vec[i]<1 || Vec[i] > N);
+    for(j=0;j<i;j++)
+	  {if(Vec[i] == Vec[j])
+	    {printf("\n Valor duplicado: \n");
+         i = i-1;   
+	    }
+	  }
+   }
+ for(i=0;i<N;i++)
+   {Pos[Vec[i]-1]= i+1;
+   }
+ for(i=0;i<N;i++)
+  {Res[i]= Pos[i]-(i+1);
+  }
+ for(i=0;i<N;i++)
+  {printf (" %d", Vec[i]);
+  }
+ printf("\n\n");
+ for(i=0;i<N;i++)
+  {printf (" %d", Pos[i]);
+  }
+ printf("\n\n");
+
+ for(i=0;i<N;i++)
+  {printf (" %d", Res[i]);
+  }
+ getch();
+}
+
