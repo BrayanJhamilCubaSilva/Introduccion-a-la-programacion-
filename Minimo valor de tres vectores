@@ -1,0 +1,63 @@
+/******************************************************************************************/
+/*Programa    : Introducción a la programación*/
+/*Nombre      : Brayan Jhamil Cuba Silva */
+/*Fecha       : 31 de julio de 2013 */
+/*Descripción : Ingresar dos vectores y un tercero para saber el minimo resultado*/
+/*Entrada     : Tres vectores y el calculo para sacar el minimo valor*/
+/*Salida      : El minimo valor de los tres vectores */
+/******************************************************************************************/
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#define V 100
+
+void leervector1(int v1[], int n);
+void leervector2(int v2[], int m);
+int menorvalor(int v1[], int v2[],int n,int m);
+
+int main()
+{int a[V],b[V],n,m;
+ printf("Ingrese tamanho al vector 1: ");
+ scanf_s("%d", &n);
+ printf("Ingrese tamanho al vector 2: ");
+ scanf_s("%d", &m);
+ leervector1(a,n);
+ leervector2(b,m);
+ menorvalor(a,b,n,m);
+ getch();
+ return 0;
+}
+
+void leervector1(int v1[], int n)
+{
+  for(int i=0; i<n; i++)
+	{printf("Ingrese valor a V[%d]",i);
+	 scanf("%d", &v1[i]);
+	}
+}
+void leervector2(int v2[], int m)
+{
+	for(int j=0; j<m; j++)
+	{printf("Ingrese valor a V[%d]",j);
+	 scanf("%d", &v2[j]);
+	}
+}
+
+int menorvalor(int v1[], int v2[],int n,int m)
+{ int menor;
+  for (int i=0; i<n; i++)
+  {for(int j=0; j<m; j++)
+   { if(v1[i]<v2[j])
+	{menor=v1[i];
+	}
+	else
+	{menor=v2[j];
+	}
+   }
+  }
+  printf("El valor menor es:%d",menor);
+  return menor;
+  
+}
