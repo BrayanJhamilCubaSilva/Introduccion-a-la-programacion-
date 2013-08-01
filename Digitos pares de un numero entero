@@ -1,0 +1,39 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de julio de 2013 */
+/*Descripción: Ingresar un numero y averiguar la cantidad de digitos pares*/
+/*Entrada    : Un numero entero*/
+/*Salida     : Sus digitos pares */
+/******************************************************************************************/
+
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+#include "math.h"
+
+void main(void)
+{int b, p, i;
+ int contp, numero;
+ printf("\n PROGRAMA QUE DETERMINA LOS DIGITOS PARES:\n"); 
+ printf("Introduzca un numero entero positivo:");
+ scanf_s("%d",&numero);
+ contp =0;
+ i =0;
+ while(numero > 0)
+ {b = numero % 10;
+  p = b%2;
+  if (p == 0)
+  {printf("%d\n",b);
+   contp = contp + 1;
+  }
+  numero = numero /10;
+  i ++;
+ }
+ printf("Numero de digitos introducidos:%d\n",i);
+ printf("El numero de digitos pares son: %d\n",contp);
+ system("pause");
+}
