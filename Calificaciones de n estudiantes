@@ -1,0 +1,46 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de julio de 2013 */
+/*Descripción: Ingresar una cantidad determinada de alumnnos y saber el promedio, aprobados, mayor nota, menor nota*/
+/*Entrada    : Cantidad de estudiantes*/
+/*Salida     : El promedio, aprobados, mayor nota, menor nota, los que pasaron con arriba de 70 */
+/******************************************************************************************/
+
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "math.h"
+
+void main()
+{int ce,control,n,sn,pc,na,maxn,minn,e70;
+ control = sn = na = e70 = maxn =  0;
+ minn = 100;
+ do
+ {printf("Ingrese cantidad de estudiantes\n\n");
+  scanf("%d",&ce);
+ }while(ce<=0);
+ while(control < ce)
+  { printf("Ingrese nota del estudiante\n\n");
+    scanf("%d",&n);
+  sn = sn + n;
+	if(n>= 51)
+		na ++;
+	if(n > maxn)
+		maxn = n;
+	if(n < minn)
+		minn = n;
+    if(n > 70)
+		e70 ++;
+	control ++;
+  }
+ pc = sn / ce;
+ printf("El promedio del curso es %d\n\n",pc); 
+ printf("Los estudiantes aprobados son %d\n\n",na); 
+ printf("La maxima nota es %d\n\n",maxn); 
+ printf("La minima nota es %d\n\n",minn); 
+ printf("Los numeros de estudiantes con mayor a 70 son %d\n\n",e70); 
+ getch();
+}
