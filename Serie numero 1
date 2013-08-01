@@ -1,0 +1,32 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de julio de 2013 */
+/*Descripción: Calcular la Serie A=N+(N-1)/2+(N-2)/3....1/N*/
+/*Entrada    : Dar velor a N*/
+/*Salida     : La serie A */
+/******************************************************************************************/
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+float serie(int n);
+
+int main()
+{int N;
+ printf("Introduzca el valor de N: ");
+ scanf_s("%d", &N);
+ serie(N);
+ printf("El resultado es %f",serie(N));
+ getch();
+ return 0;
+}
+float serie(int n)
+{int a;
+ for(int i=1; i<=n; i++)
+ {for(int j=1;j<=n;j++)
+   a = (n/j)+((n - i)/j )+ (1/n);
+ }
+ return a;
+}
