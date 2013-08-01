@@ -1,0 +1,93 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de julio de 2013 */
+/*Descripción: Mediante una busqueda binaria encontrar un valor dado en un vector*/
+/*Entrada    : Un vector y la funcion binaria*/
+/*Salida     : El valor que se desea encontrar */
+/******************************************************************************************/
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include "stdlib.h"
+
+#define nMax 10
+
+void burbuja(int vec[],int n);
+void cargar(int vec[],int n);
+void mostrar(int vec[],int n);
+void busquedabinaria(int vec[],int n,int clave);
+
+void main()
+{
+ int vec[nMax],n,clave;
+ printf("Ingrese tamanho del vector: ");
+ scanf("%d",&n);
+ cargar(vec,n);
+ burbuja(vec,n);
+ mostrar(vec,n);
+ printf("\n ingrese numero a buscar: ");
+ scanf("%d",&clave);
+ busquedabinaria(vec,n,clave);
+ system("pause");
+}
+
+void burbuja(int vec[],int n)
+{int i,j,aux;
+ for(i=0;i<(n-1);i++)
+ {
+  for(j=0;j<(n-1);j++)
+  {
+   if(vec[j]>vec[j+1])
+   {
+    aux=vec[j];
+    vec[j]=vec[j+1];
+    vec[j+1]=aux;
+   }
+  }
+ }
+}
+
+void cargar(int vec[],int n)
+{int i;
+ for(i=0;i<n;i++)
+ {
+printf("\n vec[%d]= ",i);
+scanf("%d",&vec[i]);
+ }
+}
+
+void mostrar(int vec[],int n)
+{
+ int i;
+ for(i=0;i<n;i++)
+ {
+  printf("%d\n",vec[i]);
+ }
+}
+
+void busquedabinaria(int vec[],int n,int clave)
+{
+ int abajo=0,arriba=n-1,centro;
+ while(abajo<=arriba)
+ {
+  centro=(abajo+arriba)/2;
+  if(vec[centro]==clave)
+  {
+   printf("%d\n",centro);
+  }
+  else
+  {
+  {if(vec[centro]>clave)
+
+	 {arriba = (centro-1);
+	 }
+	else
+	 {abajo = (centro+1);
+     }
+	}
+  }
+ }
+}
