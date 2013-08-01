@@ -1,0 +1,32 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de julio de 2013 */
+/*Descripción: Impresion de los numeros primos*/
+/*Entrada    : Un rango determinado de n numeros */
+/*Salida     : Los numeros primos */
+/******************************************************************************************/
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+void main()
+{int i, n, con, primos, num;
+ printf("Ingrese cantidad de numeros a mostrar:");
+ scanf_s("%d", & n);
+ con = 0;
+ num = 1;
+ for(i = 1; i<n; i++)
+ {if((num/1==num)&& (num/num==1))
+  num = primos;
+  primos = primos + 1;
+  printf("Los numeros primos son: %d",primos);
+
+ }
+ printf("Los numeros primos son: %d",primos);
+ _getch();
+    
+}
