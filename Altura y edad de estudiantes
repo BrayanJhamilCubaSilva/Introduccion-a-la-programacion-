@@ -1,0 +1,57 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de agosto de 2013 */
+/*Descripción: Calcular promedio y altura de n estudiantes segun especificaciones*/
+/*Entrada    : La edad y altura de n estudiantes*/
+/*Salida     : El promedio de la edad y altura segun especificaciones */
+/******************************************************************************************/
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#define V 100
+void edadmedia(int v, int n);
+void alturapromedio(int v, int n);
+
+int main()
+{int n, a[V];
+ printf("Ingrese numero de estudiantes: ");
+ scanf_s("%d", &n);
+ printf("La edad media es :%d",edadmedia(a,n));
+ printf("La altura promedio es:%d",alturapromedio(a,n));
+ _getch();
+ return 0;
+}
+
+void edadmedia(int v, int n)
+{float edm, h,i,p;
+ int edad;
+ p = 0;
+ printf("Ingrese altura de los estudiantes: ");
+ scanf_s("%f", &h);
+ printf("Ingrese la edad de cada estudiante: ");
+ scanf_s("%d", &edad);
+ for(i=0; i<n; i++)
+ {if(h < 1.70 && edad > 0)
+   { p = p+edad;
+   }
+ }
+ edm = p/n;
+}
+
+void alturapromedio(int v, int n)
+{float hp, h,i,p;
+ int edad;
+ p = 0;
+ printf("Ingrese altura de los estudiantes: ");
+ scanf_s("%f", &h);
+ printf("Ingrese la edad de cada estudiante: ");
+ scanf_s("%d", &edad);
+ for(i=0; i<n; i++)
+ {if(edad > 20 && h>0)
+  { p = p+h;
+  }
+ }
+ hp = p/n;
+}
