@@ -1,0 +1,36 @@
+/******************************************************************************************/
+/*Programa   : Introducción a la programación*/
+/*Nombre     : Brayan Jhamil Cuba Silva */
+/*Fecha      : 31 de julio de 2013 */
+/*Descripción: Ingresar un numero y averiguar la cantidad de digitos primos*/
+/*Entrada    : Un numero entero*/
+/*Salida     : Sus digitos primos */
+/******************************************************************************************/
+
+
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+#include "math.h"
+
+void main(void)
+{int b, p, i;
+ int contp, numero;
+ printf("\n PROGRAMA QUE DETERMINA LOS DIGITOS PRIMOS:\n"); 
+ printf("Introduzca un numero entero positivo:");
+ scanf_s("%d",&numero);
+ contp =0;
+ i =0;
+ while(numero > 0)
+ {if(numero%numero==0 && numero%1==numero)
+  {   b = numero
+    printf("%d\n",numero);
+      contp = contp++;
+  }
+ }
+ printf("Numero de digitos introducidos:%d\n",i);
+ printf("El numero de digitos primos son: %d\n",contp);
+ system("pause");
+}
