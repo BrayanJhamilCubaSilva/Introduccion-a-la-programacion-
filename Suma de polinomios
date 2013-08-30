@@ -1,0 +1,89 @@
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include "iostream"
+#include "math.h"
+using namespace std;
+
+void cargar_polinomio1(int coef[], int expo[], int n) 
+{int i;
+  for(i=0; i<n; i++)
+  {cout<<"\n\nIntroducir termino:"<<i+1<<"--->>>:\n ";
+   cout<<"\tCoeficiente ?:";
+   cin>>coef[i];
+   cout<<"\tExponente ?:";
+   cin >>expo[i];
+  }
+}
+void cargar_polinomio2(int coef1[], int expo1[], int n1) 
+{int i;
+  for(i=0; i<n1; i++)
+  {cout<<"\n\nIntroducir termino:"<<i+1<<"--->>>:\n ";
+   cout<<"\tCoeficiente ?:";
+   cin>>coef1[i];
+   cout<<"\tExponente ?:";
+   cin >>expo1[i];
+  }
+}
+void mostrar_polinomio1(int coef[], int expo[], int n) 
+{int i;
+ cout<<"\nEL polinomio es -->> :\n\n";
+ for(i=0; i<n; i++)
+ {if(i !=0)
+  {if(coef[i]>0)
+   {cout <<" + ";
+   }
+  else
+	  cout<<"  ";
+  }
+  cout<< coef[i];
+  if(expo[i]>0)
+  { cout<<"x^"<<expo[i];
+  }
+ }
+ cout<<endl;
+}
+void mostrar_polinomio2(int coef1[], int expo1[], int n1) 
+{int i;
+ cout<<"\nEL polinomio es -->> :\n\n";
+ for(i=0; i<n1; i++)
+ {if(i !=0)
+  {if(coef[i]>0)
+   {cout <<" + ";
+   }
+  else
+	  cout<<"  ";
+  }
+  cout<< coef1[i];
+  if(expo1[i]>0)
+  { cout<<"x^"<<expo1[i];
+  }
+ }
+ cout<<endl;
+}
+int resolver_polinomio(int coef[20], int expo[20], int n, int coef1[20], int expo1[20], int n1, int coef2[20], int expo2[20], int n2)
+{int i,j;
+ for(i=0; i<n; i++)
+ {for(j=0; i<n1; i++)
+  {if(coef[i]==coef[j])
+   { = (powf((expo[i]+expo[j]),coef[i]);
+   }
+  else
+   {
+   }
+  }
+ }
+}
+int main()
+{int coef[20], expo[20], n, coef1[20], expo1[20], n1, coef2[20], expo2[20], n2;
+ cout<<"Ingrese numero de terminos del polinomio 1:";
+ cin>>n;
+ cargar_polinomio1(coef,expo,n);
+ mostrar_polinomio1(coef,expo,n);
+ cout<<"Ingrese numero de terminos del polinomio 2:";
+ cin>>n1;
+ cargar_polinomio2(coef1,expo1,n1);
+ mostrar_polinomio2(coef1,expo1,n1);
+ getch();
+ return (1);
+}
