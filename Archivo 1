@@ -1,0 +1,135 @@
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+using namespace std;
+struct regAgenda
+{char nombre[30];
+ int edad;
+ char email[80];
+char estado;
+};
+void crearArchivo(char nomArch [15])
+{FILE *ptr;
+  ptr = fopen(nomArch, “w+b”);
+ fclose(ptr);
+}
+void solicitarDatos(regAgenda *reg)
+{cout<<endl<<”Introducir nombre:”;
+ cin>> reg.nombre;
+cout<<endl<<”Edad:”;
+ cin>> reg.nombre;
+cout<<endl<<”Email:”;
+ cin>> reg.nombre;
+ reg.estado = ‘N’;
+}
+void mostrarRegistro(regAgenda reg, int nroReg)
+{cout<<endl<<nroReg<<”.- ”<<reg.nombre<<”       ”<<reg.edad<<”      ”<<reg.email;
+} 
+void adicionarRegistro(char nomArch[15])
+{FILE *ptr;
+ regAgenda reg;
+ptr=fopen(nomArch,”a”);
+solicitarDatos(&reg);
+fwrite(&reg,sizeof(struct regAgenda),1,ptr);
+fclose(ptr);
+}
+void listarArchivo(char nomArch[15])
+{FILE *ptr;
+ regAgenda reg;
+ int cont=0;
+ptr=fopen(nomArch,’’r’’);
+if(ptr==NULL)
+  {cout<<”El archive no existe:”;
+  }
+  else{
+  cout<<endl<<”**LISTADO DE AMIGOS**”;
+  cout<<endl<<”Nombre            Edad           E-mail”;
+  cout<<endl<<”=======================”;
+  fread(&reg, sizeof(struct regAgenda),1,ptr);
+  while(!feof(ptr))
+     {if(reg.estado==’N’)
+         mostrarRegistro(reg,cont+1);
+         fread(&reg,sizeof(struct regAgenda),1,ptr);
+      cont++;
+     }fclose(ptr;)
+  }
+} 
+
+void buscarRegistro(char nomArch[15], int nroReg)
+{FILE *ptr;
+  regAgenda reg;
+  ptr = fopen(nomArch, “rb”);
+  if(ptr==NULL)
+   { cout<<”El archive no existe:”;
+   }else{
+   fseek(ptr,(nroReg-1)*sizeof(reg),SEEK_SET);
+   fread(&reg,sizeof(struct regAgenda),1,ptr);
+    if(feof(ptr))
+      cout<<endl<<”Registro no existe..”;
+    else 
+        {if(reg.estado==’N’)
+              mostrarRegistro(reg,nroReg);
+          else
+              cout<<endl<<”Registro eliminado…..”;
+            fclose(ptr);
+        }
+   }
+} 
+void modificarRegistro(char nomArch[15], int nroReg)
+{FILE *ptr;
+  regAgenda reg;
+  ptr=fopen(nomArch,”r+b”);
+  if(ptr==NULL)
+   {cout<<”El archive no existe..”;
+   }else
+   {fseek(ptr,(nroReg-1)*sizeof(reg),SEEK_SET);
+       fread(&reg,sizeof(struct regAgenda),1,ptr);
+    if(feof(ptr))
+      cout<<endl<<”Registro no existe..”;
+    else 
+        {if(reg.estado==’N’)
+              mostrarRegistro(reg,nroReg);
+              solicitarDatos(&reg);
+              fseek(ptr,(nroReg-1)*sizeof(reg),SEEK_SET);
+fwrite(&reg, sizeof(struct regAgenda),1,ptr);
+        }else
+             cout<<endl<<”Registro eliminado…”;
+     fclose(ptr);
+    }
+}
+
+void eliminarRegistro(char nomArch[15], int nroReg)
+{FILE *ptr;
+  regAgenda reg;
+  ptr= fopen(nomArch,”r+b”);
+ if(ptr==NULL)
+  {cout<<”El archive no existe….”;
+  }else{
+  fseek(ptr,(nroReg-1)*sizeof(reg),SEEK_SET);
+  fwrite(&reg, sizeof(struct regAgenda),1,ptr);
+  if(feof(ptr))
+  cout<<endl<<”Registro no existe..”;
+ else
+   {if(reg.estado==’N’)
+     mostrarRegistro(reg, nroReg);
+     reg.estado = ‘S’;
+     fseek(ptr,(nroReg-1)*sizeof(reg),SEEK_SET);
+     fwrite(&reg, sizeof(struct regAgenda),1,ptr);
+     cout<<endl<<”Registro eliminado exitosamente..”;
+   }else
+    cout<<endl<<”Registro Ya eliminado….”;
+    fclose(ptr);
+  }
+}
+int main()
+{//regAgenda reg;
+ //crearArchivo(“agenda.dat”);
+//adicionarRegistro(“agenda.dat”);
+listarArchivo(“agenda.dat”);
+//buscarRegistro(“agenda.dat”,2);
+//modificarRegistro(“agenda.dat”,12);
+ eliminarRegistro(“agenda.dat”,3);
+ listarArchivo(“agenda.dat”);
+getch();
+return 0;
+} 
